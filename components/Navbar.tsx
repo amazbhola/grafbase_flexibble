@@ -2,10 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
 import { NavLinks } from '@/constants'
-import AuthProviders from './AuthProviders'
+import AuthProviders from './AuthProviders';
+
 
 const Navbar = () => {
-    const session = {};
+    const session = null;
     return (
         <nav className='flexBetween navbar'>
             <div className='flex-1 flexStart gap-10'>
@@ -29,7 +30,9 @@ const Navbar = () => {
                                 </Link>
                             </>
                         ):(
-                            <AuthProviders/>
+                            <>
+                                <AuthProviders/>
+                            </>
                         )}
             </div>
         </nav>
